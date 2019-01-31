@@ -3,19 +3,17 @@ title: "IDBac Instructions for Metcalf Lab"
 author: "Chase Clark"
 date: "September 30, 2018"
 output:
-  pdf_document: default
-  html_document: default
+  html_document: 
+    toc: true
+    toc_depth: 3
+    toc_float: true
 ---
 
 
-___
+# Excel
 
-<H1 align="center"> Sample Preparation </H1>
-
-
-If you haven't already, download the Excel template for renaming raw data files [here.](/MALDI-Plate_Template/384_Spot_MALDI_Template.xltx) This template was designed to work with MALDI plates of up to 384 spots.
-
-___
+## Document sample positions on MALDI plate 
+If you haven't already, download the Excel template for renaming raw data files [here.]() 
 
 - Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet as seen below.
 
@@ -25,21 +23,34 @@ ___
 </p>
 
 
-If you don’t have access to Microsoft Excel, we have successfully tested this with the free Excel alternative:  Apache OpenOffice™ “Calc”, which can be found at [www.openoffice.org](www.openoffice.org). When saving the file, ensure you save it as type “Microsoft Excel 97/2000/XP (.xls)”.
+If you don’t have access to Microsoft Excel, you can use any other spreadsheet software such as:  Apache OpenOffice™ “Calc”, which can be found at [www.openoffice.org](www.openoffice.org). When saving the file, ensure you save it as type “Microsoft Excel 97/2000/XP (.xls or .xlsx)”.
 
 
-
+## Naming the excel file
 - The excel file will be named as the date the plate was created and the last five-digits of the MALDI-target-plate serial number:
     - *dd_mm_yyyy_sssss* 
     - Use format above, which stands for: (day_month_year_LastFiveOfSerialNumber)
 
 
 ___
+# Preparing the MALDI plate
 
-### Cleaning MALDI Target Plates
+## Cleaning the MALDI plate
+
+### Murphy Lab
+
 
 The MALDI plate should be properly cleaned before use.  In order to clean the MALDI plate, use the steps below:
-(method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5/full/nprot.2009.37.html?foxtrotcallback=true))
+method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5/full/nprot.2009.37.html?foxtrotcallback=true)
+
+1. Remove target plate from holder and rinse with acetone.
+2. To remove trace protein/lipids, use non-abrasive liquid soap.
+3. Rinse with distilled water ~2 min to completely remove soap.
+4. Sonicate in HPLC grade water (Ultrasonic bath) for ~5 min.
+5. Rinse with HPLC grade water.
+6. Rinse with HPLC grade methanol.
+
+## Metcalf Lab
 
 1. Remove target plate from holder and rinse with HPLC grade methanol.
 2. Air-dry, prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
