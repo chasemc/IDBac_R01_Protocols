@@ -1,5 +1,5 @@
 ---
-title: "IDBac Instructions for Metcalf Lab"
+title: "IDBac Database Protocol"
 author: "Chase Clark"
 date: "September 30, 2018"
 output:
@@ -7,6 +7,13 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
+    css: style.css
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+      toc: true
+      toc_depth: 3
 ---
 
 
@@ -15,7 +22,8 @@ output:
 ## Document sample positions on MALDI plate 
 If you haven't already, download the Excel template for renaming raw data files [here.]() 
 
-- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet as seen below.
+- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet .
+- Also, in the appropriate space in the excel sheet, enter the product and lot/batch number of MALDI matrix. 
 
 
 <p align="center">
@@ -27,37 +35,20 @@ If you don’t have access to Microsoft Excel, you can use any other spreadsheet
 
 
 ## Naming the excel file
-- The excel file will be named as the date the plate was created and the last five-digits of the MALDI-target-plate serial number:
+- The excel file will be named as the date the plate was started and the last five-digits of the MALDI target plate serial number:
     - *dd_mm_yyyy_sssss* 
     - Use format above, which stands for: (day_month_year_LastFiveOfSerialNumber)
 
 
-___
-# Preparing the MALDI plate
+# Metcalf Lab
 
 ## Cleaning the MALDI plate
 
-### Murphy Lab
+  1. Remove target plate from holder and briefly rinse with HPLC grade methanol.
+  2. Air-dry, prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
 
 
-The MALDI plate should be properly cleaned before use.  In order to clean the MALDI plate, use the steps below:
-method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5/full/nprot.2009.37.html?foxtrotcallback=true)
-
-1. Remove target plate from holder and rinse with acetone.
-2. To remove trace protein/lipids, use non-abrasive liquid soap.
-3. Rinse with distilled water ~2 min to completely remove soap.
-4. Sonicate in HPLC grade water (Ultrasonic bath) for ~5 min.
-5. Rinse with HPLC grade water.
-6. Rinse with HPLC grade methanol.
-
-## Metcalf Lab
-
-1. Remove target plate from holder and rinse with HPLC grade methanol.
-2. Air-dry, prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
-
-___
-
-### MALDI Matrix Preparation
+## MALDI Matrix Preparation
 1. Prepare 10 mg/mL MALDI-grade [alpha-cyano-4-hydroxycinnamic acid](http://www.sigmaaldrich.com/catalog/search?term=28166-41-8&interface=CAS%20No.&N=0&mode=partialmax&lang=en&region=US&focus=product) (CHCA) in MS-grade solvents:
    - 50% Acetonitrile (ACN)
    - 47.5% Water (H<sub>2</sub>O)
@@ -69,13 +60,13 @@ ___
 
 ___
 
-<H3 align="center">  Applying Samples to the MALDI Plate </H3>
+## Applying Samples to the MALDI Plate
 
 
 <center>
-
-![When applying bacteria you want your spot to look like the the spots in columns 1 to 2. Column 2 has a little too much, and 3 has too much cell material](ReadMe_Images/jove.png)
-
+```{r, echo = F, out.width = "400px", fig.cap = "When applying bacteria you want your spot to look like the the spots in columns 1 to 2. Column 2 has a little too much, and 3 has too much cell material"}
+knitr::include_graphics("ReadMe_Images/jove.png")
+```
 </center>
 
 
@@ -85,49 +76,95 @@ ___
 |                           |                                          |
 | ------------------------- | ---------------------------------------- |
 | 1. Apply bacteria directly without any prior chemical treatment. Smear a single bacterial colony in a thin layer directly onto the MALDI target plate using a sterile toothpick. | <img src= "ReadMe_Images/ApplyingToMALDIPlate1.png" width= 100% /> |
-| 2. Leave the PepMix and BTS spots empty.   |               |
+| 2. Leave the Calibration spots empty.   |               |
 | 3. Add 1 µL of 70% formic acid to each bacterial spot, let air dry. | <img src= "ReadMe_Images/ApplyingToMALDIPlate2.png" width= 100% />            |
 | 4. Add 1 µL of MALDI matrix to each bacterial spot, let air dry.    | <img src= "ReadMe_Images/ApplyingToMALDIPlate3.png" width= 100% />          |
 
 
 
-___
-<H3 align="center">  Shipping MALDI Plates to Murphy Lab </H3>
-<br>
+
+# Murphy Lab
+
+## Cleaning the MALDI plate
+The MALDI plate should be properly cleaned before shipping. In order to clean the MALDI plate, use the steps below:
+method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5/full/nprot.2009.37.html?foxtrotcallback=true)
+
+  1. Remove target plate from holder and rinse with acetone.
+  2. To remove trace protein/lipids, use non-abrasive liquid soap.
+  3. Rinse with distilled water ~2 min to completely remove soap.
+  4. Sonicate in HPLC grade water (Ultrasonic bath) for ~5 min.
+  5. Rinse with HPLC grade water.
+  6. Rinse with HPLC grade methanol.
+
+
+## Acquiring Data
+
+
+
+|               |               |
+| ------------- | ------------- |
+| 1. Insert MALDI plate into the mass spectrometer| <a href="acquisiton_images/Acquire1.PNG" align="center"> <img src= "acquisiton_images/Acquire1.PNG" width=900 />  </a> |
+| 2. Select the appropriate IDBac Method  | <a href="acquisiton_images/Acquire13.png" align="center"> <img align="center" src= "acquisiton_images/Acquire13.png" width=900 /> </a>    |
+| 3. Under the “AutoXecute” control panel select “New”, which is to the right of “Run” 									|  <a href="acquisiton_images/Acquire2.PNG" align="center"> <img src= "acquisiton_images/Acquire3.PNG" width=900 /> </a>    |
+| 4. If it wasn’t automatically detected, select the appropriate MALDI target plate geometry. 					|  <a href="acquisiton_images/Acquire3.PNG" align="center">  <img src= "acquisiton_images/Acquire3.PNG" width=900 /> </a>    |
+| 5. (Optional) Follow the directions to choose representative spots for laser power tuning and select “Next”   |  <a href="acquisiton_images/Acquire4.PNG" align="center">  <img src= "acquisiton_images/Acquire4.PNG" width=900 /> </a>    |
+|  Note: If you skip step 5, you should manually determine the minimum laser fluency/power needed and then press “Set initial laser power” before beginning the run         |  <a href="acquisiton_images/Acquire5.PNG" align="center">  <img src= "acquisiton_images/Acquire5.PNG" width=900 /> </a>    |
+| 6. Select “Calibrate with own template” and then select “New"             									|  <a href="acquisiton_images/Acquire6.PNG" align="center">  <img src= "acquisiton_images/Acquire6.PNG" width=900 /> </a>    |
+| 7. Follow the directions in the left panel and then select “OK”         										|  <a href="acquisiton_images/Acquire7.PNG" align="center">  <img src= "acquisiton_images/Acquire7.PNG" width=900 /> </a>    |
+| 8. Select “Next”    																							|  <a href="acquisiton_images/Acquire8.PNG" align="center">  <img src= "acquisiton_images/Acquire8.PNG" width=900 /> </a>    |
+| 9. Within the "run parameters" page it is important to ensure the correct methods are selected in the correct places. For small molecule runs change both autoXecute methods to: “IDBac_Small-Molecule_autoX”. For protein runs change both autoXecute methods to: “IDBac_Protein_AutoX.axe”.  There are four flexAnalysis methods: The protein or small molecule “Calibrant Calibration” should be selected within the calibration box’s “flexAnalysis Method” pull-down menu.  IDBac Protein Calibrant Calibration IDBac Small Molecule Calibrant Calibration. The protein or small molecule “Unknown Sample Calibration” should be selected within the second “flexAnalysis Method” pull-down menu. IDBac Protein Unknown Sample Calibration  IDBac Small Molecule Unknown Sample Calibration  When you have finished, select “Next”	| <a href="acquisiton_images/Acquire10.png" align="center">  <img src= "acquisiton_images/Acquire10.png" width=900 /> </a>  <a href="acquisiton_images/Acquire9.png" align="center">  <img src= "acquisiton_images/Acquire9.png" width=900 /> </a>    |
+| 10. Select “Save as” and save the sequence run to your data directory.     Confirm and select “OK”       		|  <a href="acquisiton_images/Acquire11.png" align="center">  <img src= "acquisiton_images/Acquire11.png" width=900 /> </a>   |
+| 11. Under the “AutoXecute” control panel select “Start automatic Run”              							|  <a href="acquisiton_images/Acquire12.png" align="center">  <img src= "acquisiton_images/Acquire12.png" width=900 /> </a>   |
 
 
 
 
-Use the Shipping Label found here:
 
+
+
+
+
+
+
+
+
+
+
+
+
+## Shipping MALDI Plates
+
+  - The plates are to be placed within the plastic Bruker MALDI case, wrapped in ?bubble wrap? and placed inside a XXin x XXin corrugated cardboard box.
+  - Request two shipping labels from Rachel or Beth.  One from the Murphy lab to the Metcalf lab and one from the Metcalf lab to the Murphy lab. Make sure to include return addresses.
+  - Request shipping labels for ?? overnight/two-day ?? shipping.
+  - Price of contents = $400 (or whatever MALDI plate costs)
+
+
+### To the Murphy Lab:
+
+Address:
+
+Dr. Brian T. Murphy
+900 S. Ashland Ave. M/C 870
+MBRB 3114
+Chicago, IL 60607
+
+
+Contains:
+
+
+## To Metcalf Lab 
 
 Address:
 
 
 
-c/o
-
 
 Contains:
 
-___
 
 
-<H3 align="center">  Shipping MALDI Plates to Metcalf Lab </H3>
-<br>
 
-
-##### Cleaning MALDI Target Plates
-
-The MALDI plate should be properly cleaned before shipping.  In order to clean the MALDI plate, use the steps below:
-method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5/full/nprot.2009.37.html?foxtrotcallback=true)
-
-1. Remove target plate from holder and rinse with acetone.
-2. To remove trace protein/lipids, use non-abrasive liquid soap.
-3. Rinse with distilled water ~2 min to completely remove soap.
-4. Sonicate in HPLC grade water (Ultrasonic bath) for ~5 min.
-5. Rinse with HPLC grade water.
-6. Rinse with HPLC grade methanol.
 
 
 
@@ -157,13 +194,13 @@ ___
     - Each run will be saved within a folder named with the same name as the corresponding excel file, in the format dd_mm_yyyy_sssss
     - The protein run will be saved within this dd_mm_yyyy_sssss folder, in a directory called "p"
     - The small molecule run will be saved within this dd_mm_yyyy_sssss folder, in a directory called "s"
-    - ![](ReadMe_Images/Raw_data_folder_structure.PNG)  (Picture has dashes instead of underscores)
+    - ![](ReadMe_Images/Raw_data_folder_structure.PNG)  
   
     
 - The correspdonding excel file will be placed inside the dd_mm_yyyy_sssss folder
 - Each dd_mm_yyyy_sssss folder will then be saved for long-term storage by compressing to ".7z" with 7-zip. https://www.7-zip.org/
   - This will immediately be stored:
     - Locally on a RAID device. Location:
-    - In the cloud. Location:
+    - In the cloud. Location: "R01_IDBac" google team drive, in the folder "database-data"
 
 ___
