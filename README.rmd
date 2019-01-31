@@ -8,27 +8,23 @@ output:
     toc_depth: 3
     toc_float: true
     css: style.css
-  pdf_document:
-    toc: true
-    toc_depth: 3
   word_document:
       toc: true
       toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
 ---
 
 
-# Excel
+# Metcalf Lab
 
-## Document sample positions on MALDI plate 
-If you haven't already, download the Excel template for renaming raw data files [here.]() 
 
-- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet .
+## Documenting sample positions on MALDI plates
+If you haven't already, download the Excel template [here.]() 
+
+- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet as they .
 - Also, in the appropriate space in the excel sheet, enter the product and lot/batch number of MALDI matrix. 
-
-
-<p align="center">
-  <img src= "ReadMe_Images/Naming_Files.png" />
-</p>
 
 
 If you don’t have access to Microsoft Excel, you can use any other spreadsheet software such as:  Apache OpenOffice™ “Calc”, which can be found at [www.openoffice.org](www.openoffice.org). When saving the file, ensure you save it as type “Microsoft Excel 97/2000/XP (.xls or .xlsx)”.
@@ -40,10 +36,10 @@ If you don’t have access to Microsoft Excel, you can use any other spreadsheet
     - Use format above, which stands for: (day_month_year_LastFiveOfSerialNumber)
 
 
-# Metcalf Lab
+
 
 ## Cleaning the MALDI plate
-
+Before applying bacteria:
   1. Remove target plate from holder and briefly rinse with HPLC grade methanol.
   2. Air-dry, prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
 
