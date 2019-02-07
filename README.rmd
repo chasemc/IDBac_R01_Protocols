@@ -16,6 +16,16 @@ output:
     toc_depth: 3
 ---
 
+```{r results='asis'}
+dat <- data.frame(a = "sdsds",flag = 1)
+dat$flag <- sprintf('![](C:/Users/chase/Documents/GitHub/IDBac_R01_Protocols/ReadMe_Images/Acquire2.PNG)')
+library(knitr)
+kable(dat)
+```
+
+
+
+
 
 # Metcalf Lab
 
@@ -23,7 +33,7 @@ output:
 ## Documenting sample positions on MALDI plates
 If you haven't already, download the Excel template [here.]() 
 
-- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet as they .
+- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet as they are going to be placed on the MALDI plate .
 - Also, in the appropriate space in the excel sheet, enter the product and lot/batch number of MALDI matrix. 
 
 
@@ -60,7 +70,7 @@ ___
 
 
 <center>
-```{r, echo = F, out.width = "400px", fig.cap = "When applying bacteria you want your spot to look like the the spots in columns 1 to 2. Column 2 has a little too much, and 3 has too much cell material"}
+```{r, echo = F, out.width = "400px", fig.cap = "When applying bacteria to MALDI plate, your spot should resemble column 2. Column 1 has a little cell material, and column 3 has too much cell material"}
 knitr::include_graphics("ReadMe_Images/jove.png")
 ```
 </center>
@@ -73,7 +83,7 @@ knitr::include_graphics("ReadMe_Images/jove.png")
 | ------------------------- | ---------------------------------------- |
 | 1. Apply bacteria directly without any prior chemical treatment. Smear a single bacterial colony in a thin layer directly onto the MALDI target plate using a sterile toothpick. | <img src= "ReadMe_Images/ApplyingToMALDIPlate1.png" width= 100% /> |
 | 2. Leave the Calibration spots empty.   |               |
-| 3. Add 1 µL of 70% formic acid to each bacterial spot, let air dry. | <img src= "ReadMe_Images/ApplyingToMALDIPlate2.png" width= 100% />            |
+| 3. Add 1 µL of 70% formic acid to each spot containing bacteria. Let air dry. | <img src= "ReadMe_Images/ApplyingToMALDIPlate2.png" width= 100% />            |
 | 4. Add 1 µL of MALDI matrix to each bacterial spot, let air dry.    | <img src= "ReadMe_Images/ApplyingToMALDIPlate3.png" width= 100% />          |
 
 
@@ -94,6 +104,10 @@ method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5
 
 
 ## Acquiring Data
+
+Each plate will require multiple calibration spots. For protein data, follow the directions in the pdf link below:
+  - Bruker Biotyper calibration procedure: 
+    - https://www.bruker.com/fileadmin/user_upload/8-PDF-Docs/Separations_MassSpectrometry/InstructionForUse/IFU_Bruker_Bacterial_Test_Standard_Revision_C.pdf
 
 
 
@@ -140,13 +154,17 @@ method adapted from [Freiwald & Sauer](http://www.nature.com/nprot/journal/v4/n5
 
 Address:
 
-Dr. Brian T. Murphy
-900 S. Ashland Ave. M/C 870
-MBRB 3114
-Chicago, IL 60607
+Dr. Brian T. Murphy  
+900 S. Ashland Ave. M/C 870  
+MBRB 3114  
+Chicago, IL 60607  
 
 
 Contains:
+
+
+
+Return Address:
 
 
 ## To Metcalf Lab 
@@ -162,21 +180,12 @@ Contains:
 
 
 
+Return Address:
 
-
-
-Use the Shipping Label found here:
-
-
-Address:
-
-
-
-c/o
-
-
-Contains:
-
+Dr. Brian T. Murphy  
+900 S. Ashland Ave. M/C 870  
+MBRB 3114  
+Chicago, IL 60607 
 
 
 ___
