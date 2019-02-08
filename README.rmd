@@ -8,6 +8,7 @@ output:
     toc_depth: 3
     toc_float: true
     css: style.css
+    self_contained: false
   word_document:
       toc: true
       toc_depth: 3
@@ -16,40 +17,47 @@ output:
     toc_depth: 3
 ---
 
-```{r results='asis'}
-dat <- data.frame(a = "sdsds",flag = 1)
-dat$flag <- sprintf('![](C:/Users/chase/Documents/GitHub/IDBac_R01_Protocols/ReadMe_Images/Acquire2.PNG)')
-library(knitr)
-kable(dat)
+
+```{r include=FALSE}
+library(magrittr)
 ```
 
 
+# Materials
 
+Note:  We use Sigma	Product: C2020  as our MALDI matrix, however we also recrystallize before use to purify it further. Sigma also sells a higher-grade MALDI matrix.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+dat <- readxl::read_excel("materials.xlsx")
+
+knitr::kable(dat)
+```
 
 
 # Metcalf Lab
 
 
 ## Documenting sample positions on MALDI plates
-If you haven't already, download the Excel template [here.]() 
+If you haven't already, download the Excel template [here.](https://drive.google.com/a/uic.edu/file/d/1QrHYVfDiLrmXUmdmfasUikIfbzD_eOx9/view?usp=sharing) 
 
-- Using the Excel®/OpenOffice™ template mentioned above, simply enter your sample names into the spreadsheet as they are going to be placed on the MALDI plate .
-- Also, in the appropriate space in the excel sheet, enter the product and lot/batch number of MALDI matrix. 
+- Using the Excel template mentioned above, simply enter your sample names into the blue-boxes at the top of the spreadsheet. Excel will then assign these to spots on the depicted MALDI plate.
+- Also, in the appropriate cells of the excel sheet, enter the product and lot/batch number of MALDI matrix used. 
 
 
-If you don’t have access to Microsoft Excel, you can use any other spreadsheet software such as:  Apache OpenOffice™ “Calc”, which can be found at [www.openoffice.org](www.openoffice.org). When saving the file, ensure you save it as type “Microsoft Excel 97/2000/XP (.xls or .xlsx)”.
+If you don’t have access to Microsoft Excel, you can use any other spreadsheet software such as:  Apache OpenOffice™ "Calc", which can be found at [www.openoffice.org](www.openoffice.org). When saving the file, ensure you save it as type "Microsoft Excel 97/2000/XP (.xls or .xlsx)".
 
 
 ## Naming the excel file
-- The excel file will be named as the date the plate was started and the last five-digits of the MALDI target plate serial number:
+- The excel file will be saved as the date the plate was started and the last five-digits of the MALDI target plate serial number:
     - *dd_mm_yyyy_sssss* 
-    - Use format above, which stands for: (day_month_year_LastFiveOfSerialNumber)
+    - (day_month_year_LastFiveOfSerialNumber)
 
 
 
 
 ## Cleaning the MALDI plate
-Before applying bacteria:
+Before applying bacteria:  
+
   1. Remove target plate from holder and briefly rinse with HPLC grade methanol.
   2. Air-dry, prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
 
@@ -60,7 +68,10 @@ Before applying bacteria:
    - 47.5% Water (H<sub>2</sub>O)
    - 2.5% Trifluoroacetic Acid (TFA)
      - e.g. 400 µL of solution = 200 µL ACN + 190 µL H<sub>2</sub>O + 10 µL TFA + 4 mg CHCA
-     
+
+- Sonicate or vortex the solution until no matrix crystals are observed. The matrix is then ready to be applied
+
+
 - You will be using 1 µL per MALDI spot.
 - Use matrix solution within 1 week and store unused solid and prepared CHCA matrix between 2-8 °C, in the dark.
 
@@ -110,21 +121,64 @@ Each plate will require multiple calibration spots. For protein data, follow the
     - https://www.bruker.com/fileadmin/user_upload/8-PDF-Docs/Separations_MassSpectrometry/InstructionForUse/IFU_Bruker_Bacterial_Test_Standard_Revision_C.pdf
 
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 
-|               |               |
-| ------------- | ------------- |
-| 1. Insert MALDI plate into the mass spectrometer| <a href="acquisiton_images/Acquire1.PNG" align="center"> <img src= "acquisiton_images/Acquire1.PNG" width=900 />  </a> |
-| 2. Select the appropriate IDBac Method  | <a href="acquisiton_images/Acquire13.png" align="center"> <img align="center" src= "acquisiton_images/Acquire13.png" width=900 /> </a>    |
-| 3. Under the “AutoXecute” control panel select “New”, which is to the right of “Run” 									|  <a href="acquisiton_images/Acquire2.PNG" align="center"> <img src= "acquisiton_images/Acquire3.PNG" width=900 /> </a>    |
-| 4. If it wasn’t automatically detected, select the appropriate MALDI target plate geometry. 					|  <a href="acquisiton_images/Acquire3.PNG" align="center">  <img src= "acquisiton_images/Acquire3.PNG" width=900 /> </a>    |
-| 5. (Optional) Follow the directions to choose representative spots for laser power tuning and select “Next”   |  <a href="acquisiton_images/Acquire4.PNG" align="center">  <img src= "acquisiton_images/Acquire4.PNG" width=900 /> </a>    |
-|  Note: If you skip step 5, you should manually determine the minimum laser fluency/power needed and then press “Set initial laser power” before beginning the run         |  <a href="acquisiton_images/Acquire5.PNG" align="center">  <img src= "acquisiton_images/Acquire5.PNG" width=900 /> </a>    |
-| 6. Select “Calibrate with own template” and then select “New"             									|  <a href="acquisiton_images/Acquire6.PNG" align="center">  <img src= "acquisiton_images/Acquire6.PNG" width=900 /> </a>    |
-| 7. Follow the directions in the left panel and then select “OK”         										|  <a href="acquisiton_images/Acquire7.PNG" align="center">  <img src= "acquisiton_images/Acquire7.PNG" width=900 /> </a>    |
-| 8. Select “Next”    																							|  <a href="acquisiton_images/Acquire8.PNG" align="center">  <img src= "acquisiton_images/Acquire8.PNG" width=900 /> </a>    |
-| 9. Within the "run parameters" page it is important to ensure the correct methods are selected in the correct places. For small molecule runs change both autoXecute methods to: “IDBac_Small-Molecule_autoX”. For protein runs change both autoXecute methods to: “IDBac_Protein_AutoX.axe”.  There are four flexAnalysis methods: The protein or small molecule “Calibrant Calibration” should be selected within the calibration box’s “flexAnalysis Method” pull-down menu.  IDBac Protein Calibrant Calibration IDBac Small Molecule Calibrant Calibration. The protein or small molecule “Unknown Sample Calibration” should be selected within the second “flexAnalysis Method” pull-down menu. IDBac Protein Unknown Sample Calibration  IDBac Small Molecule Unknown Sample Calibration  When you have finished, select “Next”	| <a href="acquisiton_images/Acquire10.png" align="center">  <img src= "acquisiton_images/Acquire10.png" width=900 /> </a>  <a href="acquisiton_images/Acquire9.png" align="center">  <img src= "acquisiton_images/Acquire9.png" width=900 /> </a>    |
-| 10. Select “Save as” and save the sequence run to your data directory.     Confirm and select “OK”       		|  <a href="acquisiton_images/Acquire11.png" align="center">  <img src= "acquisiton_images/Acquire11.png" width=900 /> </a>   |
-| 11. Under the “AutoXecute” control panel select “Start automatic Run”              							|  <a href="acquisiton_images/Acquire12.png" align="center">  <img src= "acquisiton_images/Acquire12.png" width=900 /> </a>   |
+
+text1 <- "Insert MALDI plate into the mass spectrometer"
+text2 <- "Select the appropriate IDBac Method"
+text3 <- "Under the \"AutoXecute\" control panel select \"New\", which is to the right of \"Run\""
+text4 <- "If it wasn’t automatically detected, select the appropriate MALDI target plate geometry."
+text5 <- "Manually determine the minimum laser fluency/power needed and then press \"Set initial laser power\" before beginning the run"
+text6 <- "Select \"Calibrate with own template\" and then select \"New\""
+text7 <- "Follow the directions in the left panel and then select \"OK\""
+text8 <- "Select \"Next\""
+text9 <- "Within the \"run parameters\" page it is important to ensure the correct methods are selected in the correct places. For small molecule runs change both autoXecute methods to: \"IDBac_Small-Molecule_autoX\". For protein runs change both autoXecute methods to: \"IDBac_Protein_AutoX.axe\".  There are four flexAnalysis methods: The protein or small molecule \"Calibrant Calibration\" should be selected within the calibration box’s \"flexAnalysis Method\" pull-down menu.  IDBac Protein Calibrant Calibration IDBac Small Molecule Calibrant Calibration. The protein or small molecule \"Unknown Sample Calibration\" should be selected within the second \"flexAnalysis Method\" pull-down menu. IDBac Protein Unknown Sample Calibration  IDBac Small Molecule Unknown Sample Calibration  When you have finished, select \"Next\""
+text10 <- "Select \"Save as\" and save the sequence run to your data directory. Confirm and select \"OK\""
+text11 <- "Under the \"AutoXecute\" control panel select \"Start automatic Run\""
+
+
+pict1 <- paste0("![](acquisiton_images/Acquire1.PNG)")
+pict2 <- paste0("![](acquisiton_images/Acquire13.PNG)")
+pict3 <- paste0("![](acquisiton_images/Acquire2.PNG)")
+pict4 <- paste0("![](acquisiton_images/Acquire3.PNG)")
+pict5 <- paste0("![](acquisiton_images/Acquire5.PNG)")
+pict6 <- paste0("![](acquisiton_images/Acquire6.PNG)")
+pict7 <- paste0("![](acquisiton_images/Acquire7.PNG)")
+pict8 <- paste0("![](acquisiton_images/Acquire8.PNG)")
+pict9 <- paste0("![](acquisiton_images/Acquire9.PNG)")
+pict10 <- paste0("![](acquisiton_images/Acquire11.PNG)")
+pict11 <- paste0("![](acquisiton_images/Acquire12.PNG)")
+
+
+dat <- data.frame(a = c(text1,
+                        text2,
+                        text3,
+                        text4,
+                        text5,
+                        text6,
+                        text7,
+                        text8,
+                        text9,
+                        text10,
+                        text11),
+                  b = c(pict1,
+                        pict2,
+                        pict3,
+                        pict4,
+                        pict5,
+                        pict6,
+                        pict7,
+                        pict8,
+                        pict9,
+                        pict10,
+                        pict11)
+)
+kableExtra::kable(dat,col.names = c(""," "),
+                  padding = 5) %>% 
+  kableExtra::column_spec(1, width = "10em") %>% 
+    kableExtra::column_spec(2, width = "30em")
+
+```
 
 
 
@@ -146,7 +200,7 @@ Each plate will require multiple calibration spots. For protein data, follow the
 
   - The plates are to be placed within the plastic Bruker MALDI case, wrapped in ?bubble wrap? and placed inside a XXin x XXin corrugated cardboard box.
   - Request two shipping labels from Rachel or Beth.  One from the Murphy lab to the Metcalf lab and one from the Metcalf lab to the Murphy lab. Make sure to include return addresses.
-  - Request shipping labels for ?? overnight/two-day ?? shipping.
+  - *Request shipping labels for ?? overnight/two-day ?? shipping.*
   - Price of contents = $400 (or whatever MALDI plate costs)
 
 
