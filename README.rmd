@@ -36,19 +36,19 @@ knitr::kable(dat)
 
 # Metcalf Lab
 
-## Culturing Bacteria
+## Cultivating Bacteria
 
-Prepare the following solution and autoclave to sterilize:
+Prepare the following solution and scale ingredients to the volume needed. Autoclave to sterilize.
 
-  - Soluble starch: 5g
-  - Yeast extract: 2g
-  - Peptone: 1g
-  - Agar: 7.5g
-  - Deionized water: 500mL
+  - Soluble starch: 5 g
+  - Yeast extract: 2 g
+  - Peptone: 1 g
+  - Agar: 7.5 g
+  - Deionized water: 500 mL
 
-Allow the bacteria to grow for a period of 7-days. (e.g. Inoculate agar-plate on Monday -> put onto MALDI plate the next Monday)
+Allow the bacteria to grow for a period of 7 days. (e.g. Inoculate agar plate on Monday -> put onto MALDI plate the following Monday)
 
-  - Because it is still unclear whether time has an effect on MALDI spectra of different types of bacteria it is important to plate bacteria at similar timepoints.
+  - Because it is still unclear whether time has an effect on MALDI spectra of different types of bacteria, it is important to plate bacteria at similar timepoints.
 
 ___
 
