@@ -36,12 +36,29 @@ knitr::kable(dat)
 
 # Metcalf Lab
 
+## Culturing Bacteria
+
+Prepare the following solution and autoclave to sterilize:
+
+  - Soluble starch: 5g
+  - Yeast extract: 2g
+  - Peptone: 1g
+  - Agar: 7.5g
+  - Deionized water: 500mL
+
+Allow the bacteria to grow for a period of 7-days. (e.g. Inoculate agar-plate on Monday -> put onto MALDI plate the next Monday)
+
+  - Because it is still unclear whether time has an effect on MALDI spectra of different types of bacteria it is important to plate bacteria at similar timepoints.
+
+___
+
+
 
 ## Documenting sample positions on MALDI plates
 If you haven't already, download the Excel template [here.](https://drive.google.com/a/uic.edu/file/d/1QrHYVfDiLrmXUmdmfasUikIfbzD_eOx9/view?usp=sharing) 
 
 - Using the Excel template mentioned above, simply enter your sample names into the blue-boxes at the top of the spreadsheet. Excel will then assign these to spots on the depicted MALDI plate.
-- Also, in the appropriate cells of the excel sheet, enter the product and lot/batch number of MALDI matrix used. 
+- Also, in the appropriate cells of the excel sheet, enter the product number and lot/batch number of MALDI matrix used. 
 
 
 If you don’t have access to Microsoft Excel, you can use any other spreadsheet software such as:  Apache OpenOffice™ "Calc", which can be found at [www.openoffice.org](www.openoffice.org). When saving the file, ensure you save it as type "Microsoft Excel 97/2000/XP (.xls or .xlsx)".
@@ -49,10 +66,10 @@ If you don’t have access to Microsoft Excel, you can use any other spreadsheet
 
 ## Naming the excel file
 - The excel file will be saved as the date the plate was started and the last five-digits of the MALDI target plate serial number:
-    - *dd_mm_yyyy_sssss* 
+    - Filename: *dd_mm_yyyy_sssss* 
     - (day_month_year_LastFiveOfSerialNumber)
 
-
+___
 
 
 ## Cleaning the MALDI plate
@@ -76,6 +93,7 @@ Before applying bacteria:
 - Use matrix solution within 1 week and store unused solid and prepared CHCA matrix between 2-8 °C, in the dark.
 
 ___
+
 
 ## Applying Samples to the MALDI Plate
 
