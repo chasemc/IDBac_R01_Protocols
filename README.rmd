@@ -8,7 +8,7 @@ output:
     toc_depth: 3
     toc_float: true
     css: style.css
-    self_contained: false
+    self_contained: true
   word_document:
       toc: true
       toc_depth: 3
@@ -69,10 +69,10 @@ Before applying bacteria:
    - 2.5% Trifluoroacetic Acid (TFA)
      - e.g. 400 µL of solution = 200 µL ACN + 190 µL H<sub>2</sub>O + 10 µL TFA + 4 mg CHCA
 
-- Sonicate or vortex the solution until no matrix crystals are observed. The matrix is then ready to be applied
+- Sonicate or vortex the solution until no matrix crystals are observed. The matrix is then ready to be applied.
 
 
-- You will be using 1 µL per MALDI spot.
+- You will be require 1 µL per MALDI spot.
 - Use matrix solution within 1 week and store unused solid and prepared CHCA matrix between 2-8 °C, in the dark.
 
 ___
@@ -81,7 +81,7 @@ ___
 
 
 <center>
-```{r, echo = F, out.width = "400px", fig.cap = "When applying bacteria to MALDI plate, your spot should resemble column 2. Column 1 has a little cell material, and column 3 has too much cell material"}
+```{r, echo = F, out.width = "400px", fig.cap = "When applying bacteria to MALDI plate, your spot should resemble column 2. Column 1 has insufficient cell material, and column 3 has too much cell material"}
 knitr::include_graphics("ReadMe_Images/jove.png")
 ```
 </center>
