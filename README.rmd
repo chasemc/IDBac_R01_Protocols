@@ -46,7 +46,11 @@ Prepare the following solution and scale ingredients to the volume needed. Autoc
   - Agar: 7.5 g
   - Deionized water: 500 mL
 
-Allow the bacteria to grow for a period of 7 days. (e.g. Inoculate agar plate on Monday -> put onto MALDI plate the following Monday)
+
+If using 60 mm or larger petri-dishes, make a dilution-streak of a single strain on a single dish to to allow the formation of individual colonies.
+If using multi-well plates, plate each strain into 8 different wells. 
+
+Allow the bacteria to grow for a period of 7 days. (e.g. Inoculate agar plate on Monday -> put onto MALDI plate the following Monday).
 
   - Because it is still unclear whether time has an effect on MALDI spectra of different types of bacteria, it is important to plate bacteria at similar timepoints.
 
@@ -107,6 +111,22 @@ knitr::include_graphics("ReadMe_Images/jove.png")
 
 <br>
 
+
+### Note on Replicates:
+Each strain will have 8 biological replicates (8 MALDI spots). Each replicate is the result of touching a toothpick to a different colony/different part of a colony.
+
+If using 60 mm or larger petri-dishes, create only one petri-dish per strain.
+
+  - For each of the eight MALDI spots, cell-material will be taken from a different colony/part of a colony on the petri-dish (or if the petri-dish is completely covered, from eight locations randomly-distributed across the plate). Do not pick colonies of only one morphology/phenotype (e.g. if multiple phenotypes exist such as orange versus orange with black spores, make sure to sample both types within the 8 replicates; if very different phenotypes exist, reassess purity before MALDI analysis).
+  
+If using multi-well agar plates, create eight different wells per strain.
+
+  - Each of the 8 MALDI spots corresponds to a different well in the multi-well agar plate.  
+
+___
+
+
+### Applying the Bacteria to the MALDI Plate
 
 |                           |                                          |
 | ------------------------- | ---------------------------------------- |
