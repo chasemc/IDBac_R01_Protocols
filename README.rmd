@@ -59,7 +59,7 @@ If you don’t have access to Microsoft Excel, you can use any other spreadsheet
 Before applying bacteria:  
 
   1. Remove target plate from holder and briefly rinse with HPLC grade methanol.
-  2. Air-dry, prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
+  2. Air-dry (~5-10 min until dry), prevent touching or contaminating the top surface of the plate (the side with writing and MALDI-spot circles)
 
 
 ## MALDI Matrix Preparation
@@ -72,7 +72,7 @@ Before applying bacteria:
 - Sonicate or vortex the solution until no matrix crystals are observed. The matrix is then ready to be applied.
 
 
-- You will be require 1 µL per MALDI spot.
+- You will need to make enough matrix solution to have at least 1 µL for each MALDI spot. (I recommend making a little more than needed, to account for slight evaporation of matrix while working)
 - Use matrix solution within 1 week and store unused solid and prepared CHCA matrix between 2-8 °C, in the dark.
 
 ___
@@ -94,8 +94,8 @@ knitr::include_graphics("ReadMe_Images/jove.png")
 | ------------------------- | ---------------------------------------- |
 | 1. Apply bacteria directly without any prior chemical treatment. Smear a single bacterial colony in a thin layer directly onto the MALDI target plate using a sterile toothpick. | <img src= "ReadMe_Images/ApplyingToMALDIPlate1.png" width= 100% /> |
 | 2. Leave the Calibration spots empty.   |               |
-| 3. Add 1 µL of 70% formic acid to each spot containing bacteria. Let air dry. | <img src= "ReadMe_Images/ApplyingToMALDIPlate2.png" width= 100% />            |
-| 4. Add 1 µL of MALDI matrix to each bacterial spot, let air dry.    | <img src= "ReadMe_Images/ApplyingToMALDIPlate3.png" width= 100% />          |
+| 3. Add 1 µL of 70% formic acid to each spot containing bacteria. Let air dry. (~5 min) | <img src= "ReadMe_Images/ApplyingToMALDIPlate2.png" width= 100% />            |
+| 4. Add 1 µL of MALDI matrix to each bacterial spot, let air dry. (~5 min)   | <img src= "ReadMe_Images/ApplyingToMALDIPlate3.png" width= 100% />          |
 
 
 
@@ -132,7 +132,7 @@ text5 <- "Manually determine the minimum laser fluency/power needed and then pre
 text6 <- "Select \"Calibrate with own template\" and then select \"New\""
 text7 <- "Follow the directions in the left panel and then select \"OK\""
 text8 <- "Select \"Next\""
-text9 <- "Within the \"run parameters\" page it is important to ensure the correct methods are selected in the correct places. For small molecule runs change both autoXecute methods to: \"IDBac_Small-Molecule_autoX\". For protein runs change both autoXecute methods to: \"IDBac_Protein_AutoX.axe\".  There are four flexAnalysis methods: The protein or small molecule \"Calibrant Calibration\" should be selected within the calibration box’s \"flexAnalysis Method\" pull-down menu.  IDBac Protein Calibrant Calibration IDBac Small Molecule Calibrant Calibration. The protein or small molecule \"Unknown Sample Calibration\" should be selected within the second \"flexAnalysis Method\" pull-down menu. IDBac Protein Unknown Sample Calibration  IDBac Small Molecule Unknown Sample Calibration  When you have finished, select \"Next\""
+text9 <- "Within the \"run parameters\" page it is important to ensure the correct methods are selected in the correct places. \\\n For small molecule runs, change both autoXecute methods to: \"IDBac_Small-Molecule_autoX\". \\\n For protein runs, change both autoXecute methods to: \"IDBac_Protein_AutoX.axe\".  \\\n There are four flexAnalysis methods: \\\n Either the protein or small molecule \"...Calibrant Calibration\" should be selected within the calibration box’s \"flexAnalysis Method\" pull-down menu. \\\n The matching protein or small molecule \"...Unknown Sample Calibration\" method should be selected within the second \"flexAnalysis Method\" pull-down menu. When you have finished, select \"Next\""
 text10 <- "Select \"Save as\" and save the sequence run to your data directory. Confirm and select \"OK\""
 text11 <- "Under the \"AutoXecute\" control panel select \"Start automatic Run\""
 
@@ -174,8 +174,8 @@ dat <- data.frame(a = c(text1,
                         pict11)
 )
 kableExtra::kable(dat,col.names = c(""," "),
-                  padding = 5) %>% 
-  kableExtra::column_spec(1, width = "10em") %>% 
+                  padding = 5, format = "html") %>% 
+  kableExtra::column_spec(1, width = "30em") %>% 
     kableExtra::column_spec(2, width = "30em")
 
 ```
@@ -196,7 +196,7 @@ kableExtra::kable(dat,col.names = c(""," "),
 
 
 
-## Shipping MALDI Plates
+# Shipping MALDI Plates
 
   - The plates are to be placed within the plastic Bruker MALDI case, wrapped in ?bubble wrap? and placed inside a XXin x XXin corrugated cardboard box.
   - Request two shipping labels from Rachel or Beth.  One from the Murphy lab to the Metcalf lab and one from the Metcalf lab to the Murphy lab. Make sure to include return addresses.
