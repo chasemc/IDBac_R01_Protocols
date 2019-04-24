@@ -70,8 +70,8 @@ If you don’t have access to Microsoft Excel, you can use any other spreadsheet
 
 ## Naming the excel file
 - The excel file will be saved as the date the plate was started and the last five-digits of the MALDI target plate serial number:
-    - Filename: *dd_mm_yyyy_sssss* 
-    - (day_month_year_LastFiveOfSerialNumber)
+    - Filename: *yyyy_mm_dd_sssss* 
+    - (year_month_day_LastFiveOfSerialNumber)
 
 ___
 
@@ -288,14 +288,14 @@ ___
 
 - All raw data will be named/stored in the following format:
   - Per MALDI plate
-    - Each run will be saved within a folder named with the same name as the corresponding excel file, in the format dd_mm_yyyy_sssss
-    - The protein run will be saved within this dd_mm_yyyy_sssss folder, in a directory called "p"
-    - The small molecule run will be saved within this dd_mm_yyyy_sssss folder, in a directory called "s"
+    - Each run will be saved within a folder named with the same name as the corresponding excel file, in the format yyyy_mm_dd_sssss
+    - The protein run will be saved within this yyyy_mm_dd_sssss folder, in a directory called "p"
+    - The small molecule run will be saved within this yyyy_mm_dd_sssss folder, in a directory called "s"
     - ![](ReadMe_Images/Raw_data_folder_structure.PNG)  
   
     
-- The correspdonding excel file will be placed inside the dd_mm_yyyy_sssss folder
-- Each dd_mm_yyyy_sssss folder will then be saved for long-term storage by compressing to ".7z" with 7-zip. https://www.7-zip.org/
+- The correspdonding excel file will be placed inside the yyyy_mm_dd_sssss folder
+- Each yyyy_mm_dd_sssss folder will then be saved for long-term storage by compressing to ".7z" with 7-zip. https://www.7-zip.org/
   - This will immediately be stored:
     - Locally on a RAID device. Location:
     - In the cloud. Location: "R01_IDBac" google team drive, in the folder "database-data"
