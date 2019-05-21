@@ -298,6 +298,7 @@ ___
 - Each yyyy_mm_dd_sssss folder will then be saved for long-term storage by compressing to ".7z" with 7-zip. https://www.7-zip.org/
   - This will immediately be stored:
     - Locally on a RAID device. Location:
-    - In the cloud. Location: "R01_IDBac" google team drive, in the folder "database-data"
+    - In the cloud (google team drive). Location: team drive named "R01_IDBac" "R01_IDBac/database-data/data".
+    
 
 ___
